@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Kozmo">
+    <title>ConneXtus :: Business Card Binder / prototype ::..</title>
+    <meta name="keywords" content="connextus, business, card, binder, online4color">
+    <meta name="description" content="A preliminary model for ConneXtus business card binder.">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/conneXtus.css">
+    <link rel="stylesheet" href="vendor/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- JS -->
+    <script src="js/k-master.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+    <!--<script src="vendor/aos/aos.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+   <body class="duocolor-bg">
+       <header class="unuscolor-d-bg clearfix">
+           
+       </header>
+       <div class="mainCover k-cover-img">
+           <h2>a video here</h2>
+       </div>
+       <main class="clearfix">
+               <div class="k-container">
+                  <div class="main-nos txt-center">
+                   <h1>main</h1>
+                   </div>
+               </div>        
+       </main>
+       <footer class="duocolor-bg clearfix">
+           <div class="k-container footer-grid k-padding-small">
+               <div class="footer-element">
+                <a href="" class="albus-txt">
+                    <img src="" alt="logo" width="100">
+                </a>  
+                <h5>Footer</h5>
+               </div>
+           </div>
+           <div class="k-container k-padding-small">
+               <div class="zeb-12 zeb-m-12 txt-center">
+                   <code class="unus-txt txt-small">Made with &hearts; by Ko2m0 &copy; 2022</code>
+               </div>
+           </div>
+       </footer>
+       
+       <!-- JQ  -->
+       <script>
+       
+           $(document).ready(function() {
+        var headerTop = $('#mainHeader').offset().top;
+        var headerBottom = headerTop + 100; // Sub-menu should appear after this distance from top.
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop(); // Current vertical scroll position from the top
+            if (scrollTop > headerBottom) { // Check to see if we have scrolled more than headerBottom
+                if (($("#mainHiddenMenu").is(":visible") === false)) {
+                    $('#mainHiddenMenu').fadeIn('slow').addClass('mainHiddenMenufadeIn');
+                }
+            } else {
+                if ($("#mainHiddenMenu").is(":visible")) {
+                    $('#mainHiddenMenu').hide();
+                }
+            }
+        });
+    });
+       </script>
+       <script>
+    
+function k_open() {
+    document.getElementById("mobileMenu_bar").style.width = "100%";
+}
+function k_close() {
+    document.getElementById("mobileMenu_bar").style.width = "0%";
+}
+
+
+
+
+    /* Open when someone clicks on the span element */
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+
+
+
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("k-show") == -1) {
+            x.className += " k-show";
+        } else {
+            x.className = x.className.replace(" k-show", "");
+        }
+    }
+
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" k-active-tab", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " k-active-tab";
+    }
+
+
+    
+    </script>
+        <!-- // JQ  -->
+   </body>
+    </html>
